@@ -479,6 +479,37 @@
     </string-array>
 
     <!-- Should the pinner service pin the Camera application? -->
+    <!-- List of files pinned by the Pinner Service with the apex boot image -->
+    <string-array translatable="false" name="config_apexBootImagePinnerServiceFiles">
+        <item>"/system/framework/framework.jar"</item>
+        <item>"/system/framework/services.jar"</item>
+        <item>"/system/framework/arm64/apex.oat"</item>
+        <item>"/system/framework/arm64/apex-core-libart.oat"</item>
+        <item>"/apex/com.android.runtime/javalib/core-oj.jar"</item>
+        <item>"/apex/com.android.runtime/javalib/core-libart.jar"</item>
+        <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
+    </string-array>
+
+    <!-- Values for USB port setting. in format of bootmode:current function:new function -->
+    <string-array translatable="false" name="config_oemUsbModeOverride">
+        <item>"bp-tools:mtp:diag,serial,rmnet:mtp"</item>
+        <item>"bp-tools:mtp,adb:diag,serial,rmnet,adb:mtp,adb"</item>
+        <item>"bp-tools:adb:diag,serial,rmnet,adb:adb"</item>
+        <item>"bp-tools:ptp:diag,serial,rmnet:ptp"</item>
+        <item>"bp-tools:ptp,adb:diag,serial,rmnet,adb:ptp,adb"</item>
+        <item>"bp-tools:rndis:rndis,diag,serial:mtp"</item>
+        <item>"bp-tools:rndis,adb:rndis,diag,serial,adb:mtp,adb"</item>
+        <item>"qcom:mtp:diag,serial_cdev,rmnet:mtp"</item>
+        <item>"qcom:mtp,adb:diag,serial_cdev,rmnet,adb:mtp,adb"</item>
+        <item>"qcom:ptp:diag,serial_cdev,rmnet:ptp"</item>
+        <item>"qcom:ptp,adb:diag,serial_cdev,rmnet,adb:ptp,adb"</item>
+        <item>"qcom:adb:diag,serial_cdev,rmnet,adb:adb"</item>
+        <item>"mot-factory:mtp:usbnet:mtp"</item>
+        <item>"mot-factory:mtp,adb:usbnet,adb:mtp,adb"</item>
+        <item>"mot-factory:adb:usbnet,adb:adb"</item>
+    </string-array>
+
+    <!-- True if camera app should be pinned via Pinner Service -->
     <bool name="config_pinnerCameraApp">true</bool>
 
     <!-- Should the pinner service pin the Home application? -->
